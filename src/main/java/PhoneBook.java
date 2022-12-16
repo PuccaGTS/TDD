@@ -15,4 +15,9 @@ public class PhoneBook {
                 .findFirst().map(Map.Entry::getKey)
                 .orElse("Такого номера нет в книге");
     }
+
+    public String findByName(String number){
+
+        return null;
+    }
 }
