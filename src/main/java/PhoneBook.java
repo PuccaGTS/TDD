@@ -1,5 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
     private Map<String,String> contacts = new HashMap<>();
@@ -18,5 +21,10 @@ public class PhoneBook {
 
     public String findByName(String name){
         return contacts.containsKey(name) ? contacts.get(name) : "Такого контакта нет в книге";
+    }
+
+    public Set<String> printAllNames(){
+
+        return null;
     }
 }
