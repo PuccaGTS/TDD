@@ -10,10 +10,10 @@ public class PhoneBookTestFindByName {
     @BeforeEach
     public void initPhoneBook(){
         phoneBook = new PhoneBook();
-        phoneBook.add("Света", "9-999-999-999");
-        phoneBook.add("Оля", "2532353215");
-        phoneBook.add("Катя", "666666");
-        phoneBook.add("Вася", "12121212");
+        phoneBook.add("пїЅпїЅпїЅпїЅпїЅ", "9-999-999-999");
+        phoneBook.add("пїЅпїЅпїЅ", "2532353215");
+        phoneBook.add("пїЅпїЅпїЅпїЅ", "666666");
+        phoneBook.add("пїЅпїЅпїЅпїЅ", "12121212");
     }
 
     @AfterEach
@@ -23,18 +23,18 @@ public class PhoneBookTestFindByName {
 
     @Test
     public void testFindByName(){
-        String name = "Вася";
+        String name = "пїЅпїЅпїЅпїЅпїЅ";
 
-        String expected = "12121212";
+        String expected = "9-999-999-999";
         String result = phoneBook.findByName(name);
 
         assertEquals(expected, result);
     }
-
+    @Test
     public void testFindByNameNull(){
-        String name = "Олег";
+        String name = "РћР»РµРі";
 
-        String expected = "Такого контакта нет в книге";
+        String expected = "РўР°РєРѕРіРѕ РєРѕРЅС‚Р°РєС‚Р° РЅРµС‚ РІ РєРЅРёРіРµ";
         String result = phoneBook.findByName(name);
 
         assertEquals(expected, result);

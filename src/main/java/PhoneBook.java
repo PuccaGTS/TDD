@@ -16,8 +16,7 @@ public class PhoneBook {
                 .orElse("Такого номера нет в книге");
     }
 
-    public String findByName(String number){
-
-        return null;
+    public String findByName(String name){
+        return contacts.containsKey(name) ? contacts.get(name) : "Такого контакта нет в книге";
     }
 }
