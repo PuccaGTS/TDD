@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/PhoneBookTestFindByName.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/PhoneBookTestFindByNumber.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/PhoneBookTestPrintAllNames.java" charset="UTF-8" />
   </component>
 </project>

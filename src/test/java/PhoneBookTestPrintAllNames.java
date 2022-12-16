@@ -3,7 +3,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
-import java.util.TreeSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,10 +12,10 @@ public class PhoneBookTestPrintAllNames {
     @BeforeEach
     public void initPhoneBook(){
         phoneBook = new PhoneBook();
-        phoneBook.add("Света", "9-999-999-999");
-        phoneBook.add("Оля", "2532353215");
-        phoneBook.add("Катя", "666666");
-        phoneBook.add("Вася", "12121212");
+        phoneBook.add("РЎРІРµС‚Р°", "9-999-999-999");
+        phoneBook.add("РћР»СЏ", "2532353215");
+        phoneBook.add("РљР°С‚СЏ", "666666");
+        phoneBook.add("Р’Р°СЃСЏ", "12121212");
     }
 
     @AfterEach
@@ -28,7 +27,7 @@ public class PhoneBookTestPrintAllNames {
     public void testPrintAllNamesFirstPos(){
         Set<String> treeSet = phoneBook.printAllNames();
         for (String name : treeSet){
-            String expected = "Вася";
+            String expected = "Р’Р°СЃСЏ";
             assertEquals(expected, name);
             break;
         }
@@ -37,14 +36,13 @@ public class PhoneBookTestPrintAllNames {
     @Test
     public void testPrintAllNamesArray(){
         Set<String> treeSet = phoneBook.printAllNames();
-        String [] names = (String[]) treeSet.toArray();
-        String expected1 = "Катя";
-        String expected2 = "Оля";
-        String expected3 = "Света";
+        Object [] names = treeSet.toArray();
+        String expected1 = "РљР°С‚СЏ";
+        String expected2 = "РћР»СЏ";
+        String expected3 = "РЎРІРµС‚Р°";
 
         assertEquals(names[1], expected1);
         assertEquals(names[2], expected2);
         assertEquals(names[3], expected3);
-
     }
 }

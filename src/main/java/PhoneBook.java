@@ -24,7 +24,12 @@ public class PhoneBook {
     }
 
     public Set<String> printAllNames(){
+        TreeSet<String> set = contacts.keySet().stream()
+                .collect(Collectors.toCollection(TreeSet::new));
 
-        return null;
+        for (String name : set){
+            System.out.println(name);
+        }
+        return set;
     }
 }
