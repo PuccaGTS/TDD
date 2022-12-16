@@ -25,7 +25,7 @@ public class PhoneBookTestFindByNumber {
         public void testFindByNumber(){
             String number = "666666";
 
-            String expected = "Вася";
+            String expected = "Катя";
             String result = phoneBook.findByNumber(number);
 
             assertEquals(expected, result);

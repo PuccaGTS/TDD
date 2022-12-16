@@ -10,7 +10,9 @@ public class PhoneBook {
     }
 
     public String findByNumber(String number){
-
-        return null;
+        return contacts.entrySet().stream()
+                .filter(entry -> number.equals(entry.getValue()))
+                .findFirst().map(Map.Entry::getKey)
+                .orElse("Такого номера нет в книге");
     }
 }
